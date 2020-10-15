@@ -50,3 +50,5 @@ add.onclick = function() {
   localStorage.setItem("count", count);
   counter.innerHTML = "<h3>" + count + "</h3>";
 };
+
+timesa.innerHTML = "Upgrade cookies per click ($" + price + ")" 
