@@ -1,6 +1,7 @@
 var count = 0;
 var times = 1;
 var price = 100;
+var autoclickerupgrade = 'no';
 
 count = parseInt(window.localStorage.getItem('count'));
 times = parseInt(window.localStorage.getItem('times'));
@@ -54,3 +55,14 @@ shrimp.onclick = function() {
 };
 
 timesa.innerHTML = "Upgrade shrimp per click (" + price + ")";
+
+if (autoclickerupgrade == 'yes') {
+var interval = 5000;
+var auto = window.setInterval(autoclicker, interval);
+
+function autoclicker() {
+  count += times;
+  localStorage.setItem("count", count);
+  counter.innerHTML = "<h3>" + count + "</h3>";
+}
+}
