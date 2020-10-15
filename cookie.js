@@ -18,6 +18,6 @@ if (count < 100) {
    times = 2;
    }
   count += times;
+  localStorage.setItem("count", count);
   counter.innerHTML = "<h3>" + count + "</h3>";
-localStorage.setItem("count", count);
 };
