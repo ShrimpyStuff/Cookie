@@ -51,4 +51,4 @@ add.onclick = function() {
   counter.innerHTML = "<h3>" + count + "</h3>";
 };
 
-timesa.innerHTML = "Upgrade cookies per click ($" + price + ")" 
+timesa.innerHTML = "Upgrade cookies per click ($" + price + ")";
