@@ -11,6 +11,11 @@ count = parseInt(window.localStorage.getItem('count'));
 
   counter.innerHTML = "<h3>" + count + "</h3>";
 
+reset.onclick = function() {
+  count = 0;
+  counter.innerHTML = "<h3>" + count + "</h3>";
+}
+
 add.onclick = function() {
 if (count > 100) {
    times = 2;
