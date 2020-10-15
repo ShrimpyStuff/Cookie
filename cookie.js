@@ -25,6 +25,7 @@ reset.onclick = function() {
   times = 1;
   price = 100;
   counter.innerHTML = "<h3>" + count + "</h3>";
+  timesa.innerHTML = "Upgrade cookies per click ($" + price + ")";
   localStorage.setItem("count", count);
   localStorage.setItem("times", times);
   localStorage.setItem("price", price);
@@ -39,6 +40,7 @@ timesa.onclick = function() {
     alert("You bought more cookies");
     price += 25;
     counter.innerHTML = "<h3>" + count + "</h3>";
+    timesa.innerHTML = "Upgrade cookies per click ($" + price + ")";
     localStorage.setItem("times", times);
     localStorage.setItem("count", count);
     localStorage.setItem("price", price);
