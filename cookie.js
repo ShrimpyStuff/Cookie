@@ -14,6 +14,7 @@ count = parseInt(window.localStorage.getItem('count'));
 reset.onclick = function() {
   count = 0;
   counter.innerHTML = "<h3>" + count + "</h3>";
+  localStorage.setItem("count", count);
 }
 
 add.onclick = function() {
