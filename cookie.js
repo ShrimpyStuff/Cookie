@@ -14,7 +14,7 @@ if (count == 0 || localStorage.getItem("count") == null) {
 }
 
 add.onclick = function() {
-if (count < 100) {
+if (count > 100 || localStorage.getItem("count") > 100) {
    times = 2;
    }
   count += times;
