@@ -30,7 +30,7 @@ reset.onclick = function() {
 
 timesa.onclick = function() {
   if (count < price) {
-    alert("You don't have enough cookies to do that. You need 100");
+    alert("You don't have enough cookies to do that. You need " + price);
   } else {
     count -= price;
     times += 1;
