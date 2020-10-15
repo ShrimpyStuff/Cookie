@@ -23,9 +23,11 @@ times = parseInt(window.localStorage.getItem('times'));
 reset.onclick = function() {
   count = 0;
   times = 1;
+  price = 100;
   counter.innerHTML = "<h3>" + count + "</h3>";
   localStorage.setItem("count", count);
   localStorage.setItem("times", times);
+      localStorage.setItem("price", price);
 };
 
 timesa.onclick = function() {
@@ -38,7 +40,7 @@ timesa.onclick = function() {
     price + 25;
     counter.innerHTML = "<h3>" + count + "</h3>";
     localStorage.setItem("times", times);
-    localStorage.setItem("price", price)
+    localStorage.setItem("price", price);
   }
 };
 
