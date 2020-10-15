@@ -25,7 +25,7 @@ reset.onclick = function() {
   times = 1;
   price = 100;
   counter.innerHTML = "<h3>" + count + "</h3>";
-  timesa.innerHTML = "Upgrade cookies per click ($" + price + ")";
+  timesa.innerHTML = "Upgrade shrimp per click ($" + price + ")";
   localStorage.setItem("count", count);
   localStorage.setItem("times", times);
   localStorage.setItem("price", price);
@@ -33,24 +33,24 @@ reset.onclick = function() {
 
 timesa.onclick = function() {
   if (count < price) {
-    alert("You don't have enough cookies to do that. You need $" + price);
+    alert("You don't have enough shrimp to do that. You need " + price);
   } else {
     count -= price;
     times += 1;
-    alert("You bought more cookies");
+    alert("You bought more shrimp");
     price += 25;
     counter.innerHTML = "<h3>" + count + "</h3>";
-    timesa.innerHTML = "Upgrade cookies per click ($" + price + ")";
+    timesa.innerHTML = "Upgrade shrimp per click (" + price + ")";
     localStorage.setItem("times", times);
     localStorage.setItem("count", count);
     localStorage.setItem("price", price);
   }
 };
 
-cookie.onclick = function() {
+shrimp.onclick = function() {
   count += times;
   localStorage.setItem("count", count);
   counter.innerHTML = "<h3>" + count + "</h3>";
 };
 
-timesa.innerHTML = "Upgrade cookies per click ($" + price + ")";
+timesa.innerHTML = "Upgrade shrimp per click (" + price + ")";
