@@ -47,7 +47,13 @@ timesa.onclick = function() {
   }
 };
 
-add.onclick = function() {
+/*add.onclick = function() {
+  count += times;
+  localStorage.setItem("count", count);
+  counter.innerHTML = "<h3>" + count + "</h3>";
+};*/
+
+cookie.onclick = function() {
   count += times;
   localStorage.setItem("count", count);
   counter.innerHTML = "<h3>" + count + "</h3>";
