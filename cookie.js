@@ -9,7 +9,7 @@ count = 0;
 count = parseInt(window.localStorage.getItem('count'));
 }
 
-if (count == 0) {
+if (count == 0 || localStorage.getItem("count") == null) {
   counter.innerHTML = "<h3>" + count + "</h3>";
 }
 
@@ -21,4 +21,3 @@ if (count < 100) {
   counter.innerHTML = "<h3>" + count + "</h3>";
 localStorage.setItem("count", count);
 };
-
