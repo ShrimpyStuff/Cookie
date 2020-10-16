@@ -77,7 +77,7 @@ autoclickerbuy.onclick = function() {
     autoclickerupgrade = true;
     autoclickerprice += 100;
     autoclickerinterval -= 500;
-    alert("You bought autoclicker");
+    alert("You bought autoclicker (Please reload to make it work (Don't worry it saves automatically))");
     counter.innerHTML = "<h3>" + count + "</h3>";
     autoclickerbuy.innerHTML = "Upgrade autoclicker ($" + autoclickerprice + ")";
     localStorage.setItem("auto", autoclickerprice);
