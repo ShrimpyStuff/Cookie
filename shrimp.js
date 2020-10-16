@@ -7,27 +7,27 @@ var autoclickerinterval = 5000;
 
 count = parseInt(window.localStorage.getItem('count'));
 times = parseInt(window.localStorage.getItem('times'));
-price = parseInt(window.localStorage.getItem('price'))
+price = parseInt(window.localStorage.getItem('price'));
 autoclickerprice = parseInt(window.localStorage.getItem('auto'));
 autoclickerinterval = parseInt(window.localStorage.getItem('autointerval'));
 autoclickerupgrade = parseInt(window.localStorage.getItem('autoupgrade'));
 
-if (localStorage.getItem("count") == null) {
+if (localStorage.getItem("count") === null) {
 count = 0;
 }
-if (localStorage.getItem("times") == null) {
+if (localStorage.getItem("times") === null) {
 times = 1;
 }
-if (localStorage.getItem("price") == null) {
+if (localStorage.getItem("price") === null) {
   price = 100;
 }
-if (localStorage.getItem("auto") == null) {
+if (localStorage.getItem("auto") === null) {
   autoclickerprice = 200;
 }
-if (localStorage.getItem("autointerval") == null) {
+if (localStorage.getItem("autointerval") === null) {
   autoclickerinterval = 5000;
 }
-if (localStorage.getItem('autoupgrade') == null) {
+if (localStorage.getItem('autoupgrade') === null) {
   autoclickerupgrade = no;
 }
 
@@ -37,7 +37,7 @@ reset.onclick = function() {
   count = 0;
   times = 1;
   price = 100;
-  autoclickerupgrade = "no"
+  autoclickerupgrade = "no";
   autoclickerprice = 200;
   autoclickerinterval = 5000;
   counter.innerHTML = "<h3>" + count + "</h3>";
@@ -82,6 +82,7 @@ autoclickerbuy.onclick = function() {
     localStorage.setItem("autointerval", autoclickerinterval);
     localStorage.setItem("count", count);
     localStorage.setItem("autoupgrade", autoclickerupgrade);
+    var autook = window.setInterval(autoclicker, autoclickerinterval);
   } else {
     alert("can't go lower");
   }
@@ -98,10 +99,10 @@ autoclickerbuy.innerHTML = "Upgrade autoclicker (" + autoclickerprice + ")";
 
 if (autoclickerupgrade == 'yes') {
 var autook = window.setInterval(autoclicker, autoclickerinterval);
+}
 
 function autoclicker() {
   count += times;
   localStorage.setItem("count", count);
   counter.innerHTML = "<h3>" + count + "</h3>";
-}
 }
