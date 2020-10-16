@@ -89,6 +89,11 @@ autoclickerbuy.onclick = function() {
   }
 };
 
+if (autoclickerinterval < 1) {
+  autoclickerinterval = 0;
+  localStorage.setItem("autointerval", autoclickerinterval);
+}
+
 shrimp.onclick = function() {
   count += times;
   localStorage.setItem("count", count);
