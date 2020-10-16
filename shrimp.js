@@ -3,7 +3,7 @@ var times = 1;
 var price = 100;
 var autoclickerupgrade = false;
 var autoclickerprice = 200;
-var autoclickerinterval = 5000;
+var autoclickerinterval = 5500;
 
 count = parseInt(window.localStorage.getItem('count'));
 times = parseInt(window.localStorage.getItem('times'));
@@ -24,7 +24,7 @@ if (localStorage.getItem("auto") === null) {
   autoclickerprice = 200;
 }
 if (localStorage.getItem("autointerval") === null) {
-  autoclickerinterval = 5000;
+  autoclickerinterval = 5500;
 }
 if (localStorage.getItem('autoupgrade') === null) {
   autoclickerupgrade = false;
@@ -41,7 +41,7 @@ reset.onclick = function() {
   price = 100;
   autoclickerupgrade = false;
   autoclickerprice = 200;
-  autoclickerinterval = 5000;
+  autoclickerinterval = 5500;
   counter.innerHTML = "<h3>" + count + "</h3>";
   timesa.innerHTML = "Upgrade shrimp per click ($" + price + ")";
   autoclickerbuy.innerHTML = "Upgrade autoclicker (" + autoclickerprice + ")";
