@@ -96,11 +96,7 @@ shrimp.onclick = function() {
 timesa.innerHTML = "Upgrade shrimp per click (" + price + ")";
 autoclickerbuy.innerHTML = "Upgrade autoclicker (" + autoclickerprice + ")";
 
-while (autoclickerupgrade) {
-//if (autoclickerupgrade) {
-  var autook = setInterval(autoclicker, autoclickerinterval);
-//}
-}
+  var autook = setInterval(autoclicker, autoclickerinterval, autoclickerupgrade);
 
 function autoclicker() {
   count += times;
