@@ -72,7 +72,7 @@ timesa.onclick = function() {
 autoclickerbuy.onclick = function() {
   if (count < price) {
     alert("You don't have enough shrimp to do that. You need " + autoclickerprice);
-  } else if (autoclickerinterval > 1 && count < price) {
+  } else if (autoclickerinterval > 1) {
     count -= autoclickerprice;
     autoclickerupgrade = true;
     autoclickerprice += 100;
