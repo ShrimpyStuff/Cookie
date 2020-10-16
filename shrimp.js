@@ -87,8 +87,6 @@ autoclickerbuy.onclick = function() {
   }
 };
 
-var autook = setInterval(autoclicker, autoclickerinterval);
-
 shrimp.onclick = function() {
   count += times;
   localStorage.setItem("count", count);
@@ -96,9 +94,14 @@ shrimp.onclick = function() {
 };
 
 timesa.innerHTML = "Upgrade shrimp per click (" + price + ")";
-if (autoclickerupgrade == true) {
 autoclickerbuy.innerHTML = "Upgrade autoclicker (" + autoclickerprice + ")";
+
+while (autoclickerupgrade) {
+//if (autoclickerupgrade) {
+  var autook = setInterval(autoclicker, autoclickerinterval);
+//}
 }
+
 function autoclicker() {
   count += times;
   localStorage.setItem("count", count);
