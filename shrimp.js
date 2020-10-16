@@ -90,7 +90,7 @@ autoclickerbuy.onclick = function() {
 };
 
 if (autoclickerinterval < 1) {
-  autoclickerinterval = 0;
+  autoclickerinterval = 1;
   localStorage.setItem("autointerval", autoclickerinterval);
 }
 
