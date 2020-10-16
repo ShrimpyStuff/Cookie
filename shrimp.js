@@ -10,7 +10,7 @@ times = parseInt(window.localStorage.getItem('times'));
 price = parseInt(window.localStorage.getItem('price'));
 autoclickerprice = parseInt(window.localStorage.getItem('auto'));
 autoclickerinterval = parseInt(window.localStorage.getItem('autointerval'));
-autoclickerupgrade = parseInt(window.localStorage.getItem('autoupgrade'));
+autoclickerupgrade = window.localStorage.getItem('autoupgrade');
 
 if (localStorage.getItem("count") === null) {
 count = 0;
@@ -28,7 +28,7 @@ if (localStorage.getItem("autointerval") === null) {
   autoclickerinterval = 5000;
 }
 if (localStorage.getItem('autoupgrade') === null) {
-  autoclickerupgrade = 'no';
+  autoclickerupgrade = false;
 }
 
   counter.innerHTML = "<h3>" + count + "</h3>";
@@ -96,7 +96,7 @@ shrimp.onclick = function() {
 };
 
 timesa.innerHTML = "Upgrade shrimp per click (" + price + ")";
-if (autoclickerupgrade) {
+if (autoclickerupgrade == true) {
 autoclickerbuy.innerHTML = "Upgrade autoclicker (" + autoclickerprice + ")";
 }
 function autoclicker() {
