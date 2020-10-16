@@ -10,7 +10,6 @@ times = parseInt(window.localStorage.getItem('times'));
 price = parseInt(window.localStorage.getItem('price'));
 autoclickerprice = parseInt(window.localStorage.getItem('auto'));
 autoclickerinterval = parseInt(window.localStorage.getItem('autointerval'));
-autoclickerupgrade = window.localStorage.getItem('autoupgrade');
 
 if (localStorage.getItem("count") === null) {
 count = 0;
@@ -29,6 +28,9 @@ if (localStorage.getItem("autointerval") === null) {
 }
 if (localStorage.getItem('autoupgrade') === null) {
   autoclickerupgrade = false;
+}
+if (localStorage.getItem('autoupgrade') == "true") {
+  autoclickerupgrade = true;
 }
 
   counter.innerHTML = "<h3>" + count + "</h3>";
@@ -83,7 +85,7 @@ autoclickerbuy.onclick = function() {
     localStorage.setItem("count", count);
     localStorage.setItem("autoupgrade", autoclickerupgrade);
   } else {
-    alert("can't go lower");
+    alert("Time can't go lower");
   }
 };
 
@@ -96,10 +98,12 @@ shrimp.onclick = function() {
 timesa.innerHTML = "Upgrade shrimp per click (" + price + ")";
 autoclickerbuy.innerHTML = "Upgrade autoclicker (" + autoclickerprice + ")";
 
-  var autook = setInterval(autoclicker, autoclickerinterval, autoclickerupgrade);
+  var autook = setInterval(autoclicker, autoclickerinterval);
 
 function autoclicker() {
+  if (autoclickerupgrade) {
   count += times;
   localStorage.setItem("count", count);
   counter.innerHTML = "<h3>" + count + "</h3>";
+}
 }
