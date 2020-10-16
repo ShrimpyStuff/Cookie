@@ -3,7 +3,7 @@ var times = 1;
 var price = 100;
 var autoclickerupgrade = false;
 var autoclickerprice = 200;
-var autoclickerinterval = 5500;
+var autoclickerinterval = 5501;
 
 count = parseInt(window.localStorage.getItem('count'));
 times = parseInt(window.localStorage.getItem('times'));
@@ -72,7 +72,7 @@ timesa.onclick = function() {
 autoclickerbuy.onclick = function() {
   if (count < price) {
     alert("You don't have enough shrimp to do that. You need " + autoclickerprice);
-  } else if (autoclickerinterval > 1) {
+  } else if (autoclickerinterval > 1 && count < price) {
     count -= autoclickerprice;
     autoclickerupgrade = true;
     autoclickerprice += 100;
