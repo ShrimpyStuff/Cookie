@@ -43,7 +43,7 @@ reset.onclick = function() {
   autoclickerprice = 200;
   autoclickerinterval = 5500;
   counter.innerHTML = "<h3>" + count + "</h3>";
-  timesa.innerHTML = "Upgrade shrimp per click ($" + price + ")";
+  timesa.innerHTML = "Upgrade shrimp per click (" + price + ")";
   autoclickerbuy.innerHTML = "Upgrade autoclicker (" + autoclickerprice + ")";
   localStorage.setItem("count", count);
   localStorage.setItem("times", times);
