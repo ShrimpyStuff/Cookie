@@ -1,39 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Shrimp Clicker</title>
-<style>
-body {
-background-color: black;
-}
-#SBACK {
-background-color: lightblue;
-}
-#danger {
-  margin-top: 10px;
-  display: block;
-  background-color: red;
-}
-#reset {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-</style>
-</head>
+  <head>
+    <title>Shrimp Clicker</title>
+    <!-- Moved style to its own file -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-<div id="SBACK">
-<img src="shrimp.png" id="shrimp">
-<div id="counter"></div>
-<div>
-<button id="timesa" type="button">Upgrade cookies per click ($100)</button>
-<button id="autoclickerbuy" type="button">Autoclicker</button>
-<div id="danger">
-<button id="reset" type="button">Reset</button>
-</div>
-</div>
-</div>
-<script src="shrimp.js"></script>
-</body>
-
+  <body>
+    <div id="SBACK">
+      <img src="shrimp.png" id="shrimp" />
+      <div id="counter"></div>
+      <div>
+        <button id="timesa" type="button">
+          Upgrade cookies per click ($100)
+        </button>
+        <button id="autoclickerbuy" type="button">Autoclicker</button>
+        <div id="danger">
+          <button id="reset" type="button">Reset</button>
+        </div>
+      </div>
+    </div>
+    <script src="shrimp.js"></script>
+  </body>
 </html>

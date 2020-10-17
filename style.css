@@ -1,0 +1,18 @@
+body {
+  background-color: black;
+}
+
+#SBACK {
+  background-color: lightblue;
+}
+
+#danger {
+  margin-top: 10px;
+  display: block;
+  background-color: red;
+}
+
+#reset {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
