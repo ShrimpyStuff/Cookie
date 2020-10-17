@@ -19,9 +19,9 @@ reset.onclick = function () {
   autoclickerupgrade = false;
   autoclickerprice = 200;
   autoclickerinterval = 5500;
-  counter.innerHTML = '<h3>' + count + '</h3>';
-  timesa.innerHTML = 'Upgrade shrimp per click ($' + price + ')';
-  autoclickerbuy.innerHTML = 'Upgrade autoclicker ($' + autoclickerprice + ')';
+  counter.innerHTML = `<h3>${count}</h3>`;
+  timesa.innerHTML = `Upgrade shrimp per click ($${price})`;
+  autoclickerbuy.innerHTML = `Upgrade autoclicker ($${autoclickerprice})`;
   localStorage.setItem('count', count);
   localStorage.setItem('times', times);
   localStorage.setItem('price', price);
@@ -32,7 +32,7 @@ reset.onclick = function () {
 
 timesa.onclick = function () {
   if (count < price) {
-    alert("You don't have enough shrimp to do that. You need " + price);
+    alert(`You don't have enough shrimp to do that. You need $${price}`);
     return;
   }
 
@@ -40,8 +40,8 @@ timesa.onclick = function () {
   times++;
   alert('You bought more shrimp');
   price += 25;
-  counter.innerHTML = '<h3>' + count + '</h3>';
-  timesa.innerHTML = 'Upgrade shrimp per click ($' + price + ')';
+  counter.innerHTML = `<h3>${count}</h3>`;
+  timesa.innerHTML = `Upgrade shrimp per click ($${price})`;
   localStorage.setItem('times', times);
   localStorage.setItem('count', count);
   localStorage.setItem('price', price);
@@ -51,7 +51,7 @@ autoclickerbuy.onclick = function () {
   count;
   if (count < price) {
     alert(
-      "You don't have enough shrimp to do that. You need " + autoclickerprice
+      `You don't have enough shrimp to do that. You need ${autoclickerprice}`
     );
   } else if (autoclickerinterval > 1) {
     count -= autoclickerprice;
@@ -61,9 +61,8 @@ autoclickerbuy.onclick = function () {
     alert(
       "You bought autoclicker (Please reload to make it work (Don't worry it saves automatically))"
     );
-    counter.innerHTML = '<h3>' + count + '</h3>';
-    autoclickerbuy.innerHTML =
-      'Upgrade autoclicker ($' + autoclickerprice + ')';
+    counter.innerHTML = `<h3>${count}</h3>`;
+    autoclickerbuy.innerHTML = `Upgrade autoclicker ($${autoclickerprice})`;
     localStorage.setItem('auto', autoclickerprice);
     localStorage.setItem('autointerval', autoclickerinterval);
     localStorage.setItem('count', count);
@@ -81,11 +80,11 @@ if (autoclickerinterval < 1) {
 shrimp.onclick = function () {
   count += times;
   localStorage.setItem('count', count);
-  counter.innerHTML = '<h3>' + count + '</h3>';
+  counter.innerHTML = `<h3>${count}</h3>`;
 };
 
-timesa.innerHTML = 'Upgrade shrimp per click ($' + price + ')';
-autoclickerbuy.innerHTML = 'Upgrade autoclicker ($' + autoclickerprice + ')';
+timesa.innerHTML = `Upgrade shrimp per click ($${price})`;
+autoclickerbuy.innerHTML = `Upgrade autoclicker ($${autoclickerprice})`;
 
 const autook = setInterval(autoclicker, autoclickerinterval);
 
@@ -94,5 +93,5 @@ function autoclicker() {
 
   count += times;
   localStorage.setItem('count', count);
-  counter.innerHTML = '<h3>' + count + '</h3>';
+  counter.innerHTML = `<h3>${count}</h3>`;
 }
