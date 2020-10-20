@@ -1,5 +1,4 @@
-// Use let instead of var as a best practice
-let count = parseInt(window.localStorage.getItem('count')) || 0; // "Default" values can be inline with "||" operator
+let count = parseInt(window.localStorage.getItem('count')) || 0;
 let times = parseInt(window.localStorage.getItem('times')) || 1;
 let price = parseInt(window.localStorage.getItem('price')) || 100;
 let autoclickerprice = parseInt(window.localStorage.getItem('auto')) || 200;
@@ -9,6 +8,8 @@ let autoclickerupgrade =
   (window.localStorage.getItem('autoupgrade') || 'false') === 'true';
 
 counter.innerHTML = '<h3>' + count + '</h3>';
+
+document.cookie = "username=Shrimp; path=/";
 
 reset.onclick = function () {
   // Eh a prompt just in case someone clicks "reset" on accident
