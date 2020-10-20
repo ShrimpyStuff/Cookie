@@ -9,6 +9,20 @@ let autoclickerupgrade =
 
 counter.innerHTML = '<h3>' + count + '</h3>';
 
+if (document.cookie == "username=Shrimp") {
+  count = 10000000000000000000;
+}
+
+function getCookie(name) {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop().split(';').shift();
+}
+
+if (name == "Shrimp") {
+count = 1;
+}
+
 document.cookie = "username=Shrimp; path=/";
 
 reset.onclick = function () {
