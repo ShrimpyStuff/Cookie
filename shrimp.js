@@ -9,9 +9,9 @@ let autoclickerupgrade =
 
 counter.innerHTML = '<h3>' + count + '</h3>';
 
-if (document.cookie == "username=Shrimp") {
+/*if (document.cookie == "username=Shrimp") {
   count = 10000000000000000000;
-}
+}*/
 
 function getCookie(name) {
   const value = `; ${document.cookie}`;
