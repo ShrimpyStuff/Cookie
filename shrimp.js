@@ -1,3 +1,5 @@
+fetch('https://shrimpclickersql.herokuapp.com/');
+
 let count = parseInt(window.localStorage.getItem('count')) || 0;
 let times = parseInt(window.localStorage.getItem('times')) || 1;
 let price = parseInt(window.localStorage.getItem('price')) || 100;
