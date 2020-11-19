@@ -1,0 +1,6 @@
+{
+	"typeAcquisition": {
+		// Idk this adds jQuery intellisense for VSCode somehow
+		"include": ["jquery"]
+	}
+}
